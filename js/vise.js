@@ -4,6 +4,7 @@
 var events_count = [];
 var outliers_count = [];
 var scores = [];
+var km = null;
 var canvas = null;
 var ctx = null;
 var blockSize = 4; //shall be 2, 4 is to amplify for visualization
@@ -42,7 +43,7 @@ function clearOldLocs() {
 
 function drawNewLocs(eventID) {
     //draw locations of outliers
-    var locs = km1[eventID].locations;
+    var locs = km[eventID].locations;
     for (var j = 0; j < locs.length; j++) {
         var loc = locs[j];
         if (typeof loc != 'undefined') {
@@ -58,7 +59,6 @@ function drawNewLocs(eventID) {
 };
 
 function showResult(fileId) {
-    var km = null;
     switch (parseInt(fileId)) {
         case 1:
             km = km1;
@@ -69,8 +69,11 @@ function showResult(fileId) {
         case 3:
             km = em1;
             break;
+        case 4:
+            km = kmall;
+            break;
         default:
-            km = km1;
+            km = null;
     };
 
     var events_stat = {};
@@ -183,7 +186,7 @@ function loadChart() {
             pointInterval: 24 * 60 * 60 * 1000 * 365, // one day
 
         }]
-    });//distribution chart
+    }); //distribution chart
 
     //ranking chart
     $('#rankhist').highcharts({

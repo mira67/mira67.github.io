@@ -72,6 +72,9 @@ function showResult(fileId) {
         case 4:
             km = kmall;
             break;
+        case 5:
+            km = emall;
+            break;
         default:
             km = null;
     };

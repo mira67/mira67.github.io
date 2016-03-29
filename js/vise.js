@@ -75,11 +75,14 @@ function showResult(fileId) {
         case 5:
             km = emall;
             break;
-                    case 6:
+        case 6:
             km = dball;
             break;
         case 7:
             km = dbgl;
+            break;
+        case 8:
+            km = dbnoise;
             break;
         default:
             km = null;

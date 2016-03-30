@@ -84,6 +84,9 @@ function showResult(fileId) {
         case 8:
             km = dbnoise;
             break;
+        case 9:
+            km = gl3join;
+            break;
         default:
             km = null;
     };

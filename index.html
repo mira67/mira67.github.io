@@ -36,7 +36,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
-.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14465,6 +14464,10 @@ a.anchor-link {
   display: none;
 }
 
+.highlight  {
+  margin: 0.4em;
+}
+
 /* Input area styling */
 .jp-InputArea {
   overflow: hidden;
@@ -14474,26 +14477,9 @@ a.anchor-link {
   overflow: hidden;
 }
 
-.CodeMirror.cm-s-jupyter .highlight pre {
-/* weird, but --jp-code-padding defined to be 5px but 4px horizontal padding is hardcoded for pre.CodeMirror-line */
-  padding: var(--jp-code-padding) 4px;
+.CodeMirror pre {
   margin: 0;
-
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-
-}
-
-.jp-OutputArea-output pre {
-  line-height: inherit;
-  font-family: inherit;
-}
-
-.jp-RenderedText pre {
-  color: var(--jp-content-font-color1);
-  font-size: var(--jp-code-font-size);
+  padding: 0;
 }
 
 /* Using table instead of flexbox so that we can use break-inside property */
@@ -14593,7 +14579,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<img src="http://www.mira67.com/images/profile_img.png" width="240" height="240" style="margin:auto"/>
+<p><img src="https://avatars.githubusercontent.com/u/5383940?s=400&u=43f41482f30b4791ee6dbafff702c9227662660c&v=4" width="240" height="240" style="margin:auto"/></p>
 
 </div>
 </div>
@@ -14605,7 +14591,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong><a href="index.html">Profile</a></strong>   |    <strong><a href="publications.html">Publications</a></strong>   |  <strong><a href="blog.html">Blog</a></strong></p>
+<p><strong><a href="index.html">About</a></strong>  |  <strong><a href="blog.html">Blog</a></strong></p>
 
 </div>
 </div>
@@ -14617,7 +14603,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Qi-Liu"><center>Qi Liu</center><a class="anchor-link" href="#Qi-Liu">&#182;</a></h1><p>I received B.S., M.S. in Electrical Engineer from Harbin Institute of Technology, China, in 2010, 2012, respectively. I am currently pursuing the Ph.D. degree with the Department of Electrical and Computer and Energy Engineering, University of Colorado, Boulder. Advisors: Dr. Li Shang and Dr. Qin Lv. My current research interests include machine learning, data mining, wearable computing. I am a student member of IEEE.</p>
+<h1 id="Qi-Liu"><center>Qi Liu</center><a class="anchor-link" href="#Qi-Liu">&#182;</a></h1><p>I am a problem solver, innovator, and a leader.</p>
+<p>My problem solving principles:</p>
+<ul>
+<li>Solve a real problem.</li>
+<li>Data-driven.</li>
+<li>Simplify.</li>
+</ul>
+<p>Sometime, when there are no sufficient observable data points for a data-driven decision, I make decisions with the help of my intuitions or <code>knack</code> with <code>natural data</code> from my neural network.</p>
 
 </div>
 </div>
@@ -14680,7 +14673,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-
 </div>
 </div>
 </div>
@@ -14692,7 +14684,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <center> © 2022 QI LIU </center>
-
 </div>
 </div>
 </div>
